@@ -1,0 +1,238 @@
+/* ── Reset et base ───────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(to bottom right, #f8f5f1, #fdfbf8);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── Navigation ──────────────────────────────────────── */
+nav {
+    background-color: #3e3128;
+    padding: 14px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+nav .logo {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a {
+    color: #f3e8dd;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ── Conteneur de formulaire ─────────────────────────── */
+.container {
+    max-width: 480px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(90, 70, 50, 0.10);
+    border: 1px solid #f0e7de;
+}
+
+.container h1 {
+    text-align: center;
+    color: #3e3128;
+    margin-bottom: 8px;
+    font-size: 1.9rem;
+}
+
+.container .subtitle {
+    text-align: center;
+    color: #8b7d72;
+    margin-bottom: 30px;
+    font-size: 0.92rem;
+}
+
+/* ── Champs de formulaire ────────────────────────────── */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5a4637;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ece4dc;
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: #fffdfb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #c89b7b;
+    box-shadow: 0 0 0 4px rgba(200, 155, 123, 0.15);
+}
+
+/* ── Bouton ──────────────────────────────────────────── */
+.btn {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(to right, #c89b7b, #b07d5e);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+    margin-top: 8px;
+}
+
+.btn:hover {
+    opacity: 0.92;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* ── Messages d'erreur et succes ─────────────────────── */
+.alerte {
+    padding: 12px 16px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.alerte-erreur {
+    background-color: #ffe8e3;
+    color: #a04d3c;
+    border: 1px solid #f5c6bb;
+}
+
+.alerte-succes {
+    background-color: #edf8ef;
+    color: #2d6a3f;
+    border: 1px solid #cce8d2;
+}
+
+/* ── Lien de bas de formulaire ───────────────────────── */
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #7a6d63;
+}
+
+.form-footer a {
+    color: #b07d5e;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ── Page d'accueil protegee ─────────────────────────── */
+.welcome-box {
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(90, 70, 50, 0.10);
+    text-align: center;
+}
+
+.welcome-box h1 {
+    color: #3e3128;
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.welcome-box p {
+    color: #6f655d;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.badge-email {
+    display: inline-block;
+    background: #f8f1eb;
+    border: 1px solid #ead8ca;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.9rem;
+    color: #8c6247;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* ── Page profil ─────────────────────────── */
+
+.profile-box {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(90, 70, 50, 0.10);
+    border: 1px solid #f0e7de;
+}
+
+.profile-box h1 {
+    text-align: center;
+    color: #3e3128;
+    margin-bottom: 10px;
+}
+
+.profile-box p {
+    text-align: center;
+    color: #8b7d72;
+    margin-bottom: 30px;
+    font-size: 0.92rem;
+}
+
+.photo-profil {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ead8ca;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
