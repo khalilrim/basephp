@@ -101,7 +101,6 @@ $resultat = $stmt->execute([
     ':nom' => htmlspecialchars($nom, ENT_QUOTES, 'UTF-8'), 
     ':email'  => $email, 
     ':mdp'    => $mdp_hache, // On insere le HASH, jamais le mot de passe en clair 
-    ':date_inscription' => date('Y-m-d H-i-s'),
 
 ]); 
  
