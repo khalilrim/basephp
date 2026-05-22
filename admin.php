@@ -8,7 +8,7 @@ if (empty($_SESSION['utilisateur_id'])) {
 }
 
 $stmt = $pdo->prepare(
-    "SELECT role FROM utilisateur WHERE id = :id"
+    "SELECT role FROM utilisateurs WHERE id = :id"
 );
 
 $stmt->execute([
@@ -22,7 +22,7 @@ if ($user['role'] !== 'admin') {
 }
 
 $stmt = $pdo->query(
-    "SELECT prenom, nom, email FROM utilisateur"
+    "SELECT prenom, nom, email FROM utilisateurs"
 );
 
 $utilisateurs = $stmt->fetchAll();

@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `utilisateur`
 --
 
-CREATE TABLE `utilisateur` (
+CREATE TABLE `utilisateurs` (
   `id` int(11) NOT NULL,
   `prenom` varchar(100) NOT NULL,
   `nom` varchar(100) NOT NULL,
@@ -43,7 +43,7 @@ CREATE TABLE `utilisateur` (
 -- Déchargement des données de la table `utilisateur`
 --
 
-INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `mot_de_passe`, `date_inscription`, `photo_profil`, `role`, `tentatives_connexion`) VALUES
+INSERT INTO `utilisateurs` (`id`, `prenom`, `nom`, `email`, `mot_de_passe`, `date_inscription`, `photo_profil`, `role`, `tentatives_connexion`) VALUES
 (3, 'rim', 'khalil', 'khalilrim45@gmail.com', '$2y$10$TAuFbmYNpt5IOwfqW2gpN.YMQYz6IvTdKbgTUFIkDKINmEyS9B00i', '2026-05-20 15:00:24', 'photo.png', 'admin', 0);
 
 --
@@ -53,7 +53,7 @@ INSERT INTO `utilisateur` (`id`, `prenom`, `nom`, `email`, `mot_de_passe`, `date
 --
 -- Index pour la table `utilisateur`
 --
-ALTER TABLE `utilisateur`
+ALTER TABLE `utilisateurs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -63,7 +63,7 @@ ALTER TABLE `utilisateur`
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
-ALTER TABLE `utilisateur`
+ALTER TABLE `utilisateurs`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 

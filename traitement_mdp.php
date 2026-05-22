@@ -7,7 +7,7 @@ require_once 'config/connexion.php';
 $email = trim($_POST['email']);
 
 $stmt = $pdo->prepare(
-    "SELECT * FROM utilisateur WHERE email = :email"
+    "SELECT * FROM utilisateurs WHERE email = :email"
 );
 
 $stmt->execute([

@@ -7,7 +7,7 @@ if (empty($_SESSION['utilisateur_id'])) {
     exit;
 }
 
-$stmt = $pdo->prepare("SELECT prenom FROM utilisateur WHERE id = :id");
+$stmt = $pdo->prepare("SELECT prenom FROM utilisateurs WHERE id = :id");
 $stmt->execute([':id' => $_SESSION['utilisateur_id']]);
 
 $user = $stmt->fetch();
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     );
 
     $stmt = $pdo->prepare(
-        "UPDATE utilisateur 
+        "UPDATE utilisateurs 
          SET prenom = :prenom,
          photo_profil = :photo
          WHERE id = :id"

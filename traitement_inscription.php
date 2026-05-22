@@ -71,7 +71,7 @@ if ($mdp !== $mdp_confirm) {
  
 // ── 4. Verification que l'email n'est pas deja utilise ─────────────── 
 // Requete preparee pour eviter les injections SQL 
-$stmt = $pdo->prepare("SELECT id FROM utilisateur WHERE email = :email LIMIT 1"); 
+$stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = :email LIMIT 1"); 
 $stmt->execute([':email' => $email]); 
 $utilisateur_existant = $stmt->fetch(); 
  
@@ -92,7 +92,7 @@ $mdp_hache = password_hash($mdp, PASSWORD_DEFAULT);
 // Requete preparee avec des placeholders (:prenom, :email, :mdp) 
 // Cela protege completement contre les injections SQL 
 $stmt = $pdo->prepare( 
-    "INSERT INTO utilisateur (prenom, nom, email, mot_de_passe, date_inscription) 
+    "INSERT INTO utilisateurs (prenom, nom, email, mot_de_passe, date_inscription) 
      VALUES (:prenom, :nom, :email, :mdp, NOW())" 
 ); 
  

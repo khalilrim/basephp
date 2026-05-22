@@ -13,7 +13,7 @@ if (empty($_SESSION['utilisateur_id'])) {
 // On recupere les infos fraiches depuis la BDD (et non seulement la session) 
 $stmt = $pdo->prepare( 
     "SELECT prenom, nom, email, date_inscription 
-     FROM utilisateur
+     FROM utilisateurs
      WHERE id = :id 
      LIMIT 1" 
 ); 

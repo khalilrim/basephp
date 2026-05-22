@@ -25,7 +25,7 @@ if (empty($email) || empty($mdp)) {
 // car le mot de passe en BDD est un hash, pas le mot de passe en clair. 
 $stmt = $pdo->prepare( 
     "SELECT id, prenom, nom, email, mot_de_passe, tentatives_connexion
-     FROM utilisateur
+     FROM utilisateurs
      WHERE email = :email 
      LIMIT 1" 
 ); 
@@ -68,7 +68,7 @@ if (
     $nouvelle_tentative = $utilisateur['tentatives_connexion'] + 1;
 
     $update = $pdo->prepare("
-        UPDATE utilisateur
+        UPDATE utilisateurs
         SET tentatives_connexion = :tentatives
         WHERE id = :id"
     );
@@ -88,7 +88,7 @@ if (
 // On regenere l'ID de session pour eviter les attaques de fixation de session 
 
 $reset = $pdo->prepare("
-    UPDATE utilisateur
+    UPDATE utilisateurs
     SET tentatives_connexion = 0
     WHERE id = :id"
     );
